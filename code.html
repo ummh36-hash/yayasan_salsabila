@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#e2ebe1",
+            "error": "#ba1a1a",
+            "outline": "#707971",
+            "primary-fixed-dim": "#95d4ac",
+            "on-primary-container": "#84c39b",
+            "background": "#f3fcf2",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#dce5db",
+            "primary": "#003820",
+            "secondary-fixed-dim": "#79db8d",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdf99",
+            "tertiary-container": "#5a4300",
+            "on-tertiary-fixed": "#251a00",
+            "surface-tint": "#2d6a48",
+            "error-container": "#ffdad6",
+            "surface": "#f3fcf2",
+            "surface-bright": "#f3fcf2",
+            "surface-dim": "#d4dcd3",
+            "on-secondary-fixed-variant": "#005323",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#b0f1c7",
+            "on-tertiary-container": "#d8af4a",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#2a322c",
+            "surface-variant": "#dce5db",
+            "secondary": "#006d30",
+            "outline-variant": "#c0c9c0",
+            "surface-container-low": "#edf6ec",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#eaf3e9",
+            "on-secondary-fixed": "#00210a",
+            "secondary-container": "#92f5a4",
+            "on-primary-fixed": "#002111",
+            "on-primary-fixed-variant": "#0f5132",
+            "on-secondary-container": "#007233",
+            "inverse-primary": "#95d4ac",
+            "on-background": "#161d18",
+            "on-surface": "#161d18",
+            "tertiary": "#3e2e00",
+            "primary-container": "#0f5132",
+            "tertiary-fixed-dim": "#ecc15a",
+            "on-tertiary-fixed-variant": "#5a4300",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#404942",
+            "secondary-fixed": "#95f8a7",
+            "surface-container": "#e7f0e6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-2xl": "4rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Newsreader"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Newsreader"],
+            "caption": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Newsreader"],
+            "headline-lg-mobile": ["Newsreader"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Newsreader"]
+          },
+          "fontSize": {
+            "body-sm": ["0.875rem", {
+              "lineHeight": "1.375rem",
+              "fontWeight": "400"
+            }],
+            "display-hero-mobile": ["2.25rem", {
+              "lineHeight": "2.75rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }],
+            "headline-sm": ["1.25rem", {
+              "lineHeight": "1.75rem",
+              "fontWeight": "600"
+            }],
+            "headline-md": ["1.75rem", {
+              "lineHeight": "2.25rem",
+              "fontWeight": "600"
+            }],
+            "caption": ["0.75rem", {
+              "lineHeight": "1rem",
+              "fontWeight": "400"
+            }],
+            "label-lg": ["0.875rem", {
+              "lineHeight": "1.25rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }],
+            "body-md": ["1rem", {
+              "lineHeight": "1.625rem",
+              "fontWeight": "400"
+            }],
+            "label-md": ["0.75rem", {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.05em",
+              "fontWeight": "600"
+            }],
+            "display-hero": ["3.75rem", {
+              "lineHeight": "4.25rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "500"
+            }],
+            "headline-lg-mobile": ["1.75rem", {
+              "lineHeight": "2.25rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }],
+            "body-lg": ["1.125rem", {
+              "lineHeight": "1.875rem",
+              "fontWeight": "400"
+            }],
+            "headline-lg": ["2.5rem", {
+              "lineHeight": "3rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,81,50,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div class="flex items-center gap-space-md"><img alt="Logo Yayasan Salsabila" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMlg_PrWgikkEFlUDj618nRt1dviM0Qxf-6gw26DztRxhVi0IeOzAcCIeiM3kTGRNWIcRmXMMnP6dVwv_Prgn6Zca5Ja4Ur7OAznB18eshkP_B4EycNO5cyHPnacH3JgMaiFUBN1cui5tEQR6IBTGS_9Y2RJeciHCJ1zf01fq69aYQuz0l4ruKXRRcdOCWaBLy9s-xGxAv3-vIOuNRXtR5rzuvn0KneTrnexxXWWQp4n_-1aeHoHta"><span
+          class="font-headline-md text-headline-md text-primary tracking-tight">Yayasan Salsabila</span></div>
+      <nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a
+          aria-current="page" class="transition-colors text-primary font-bold" data-path="utama" href="#">Utama</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="tentang-kami" href="#">Tentang Kami</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="donasi-kontak" href="#">Donasi &amp; Kontak</a></nav>
+      <div class="flex items-center gap-space-md"><a
+          class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-secondary transition-all shadow-[0_2px_8px_-2px_rgba(15,81,50,0.12)]"
+          data-path="hubungi-kami" href="#">Hubungi Kami</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- SECTION 1: UTAMA (HERO) -->
+      <section class="relative overflow-hidden pt-12 pb-24 lg:pt-16 lg:pb-32 bg-background" id="utama">
+        <!-- Subtle Background Islamic Arabesque Geometries -->
+        <div
+          class="absolute inset-0 pointer-events-none opacity-[0.04] text-primary flex items-center justify-center overflow-hidden">
+          <svg class="w-[900px] h-[900px] -rotate-12" fill="currentColor" viewBox="0 0 200 200">
+            <path
+              d="M100,0 L115,45 L160,15 L145,60 L195,60 L160,90 L200,115 L155,125 L175,170 L130,155 L120,200 L95,165 L60,195 L65,150 L20,160 L45,120 L0,105 L40,85 L15,45 L60,55 Z">
+            </path>
+          </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Hero Content Column -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md tracking-wider uppercase">
+                <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim"
+                  style="font-variation-settings: 'FILL' 1;">stars</span>
+                <span>Pusat Pembelajaran &amp; Kebajikan Umat</span>
+              </div>
+              <div class="space-y-4">
+                <h1 class="font-display-hero text-display-hero text-primary leading-tight">
+                  Yayasan Salsabila
+                </h1>
+                <p class="font-headline-md text-headline-md text-on-surface-variant font-normal">
+                  Bergerak Bersama untuk Pendidikan Islam
+                </p>
+              </div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Mendedikasikan langkah untuk menumbuhkan tunas generasi Qur'ani dan memperkaya pemahaman keislaman bagi
+                setiap lapisan usia di lingkungan yang teduh, inklusif, dan penuh berkah.
+              </p>
+              <div class="pt-2 flex flex-wrap items-center gap-4">
+                <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all group"
+                  href="#kontak">
+                  <span>Hubungi Kami</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-surface-container transition-all"
+                  href="#tentang-kami">
+                  Pelajari Program
+                </a>
+              </div>
+              <!-- Micro Metric Highlights -->
+              <div class="grid grid-cols-3 gap-6 pt-8 w-full max-w-lg">
+                <div class="flex flex-col">
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-primary font-medium">350+</span>
+                  <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Santri
+                    Terbina</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-primary font-medium">100%</span>
+                  <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Amanah &amp;
+                    Terbuka</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-primary font-medium">12+</span>
+                  <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Halaqah
+                    Aktif</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Hero Visual Collage -->
+            <div class="lg:col-span-5 relative">
+              <!-- Ambient Glow Backdrop -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-primary-fixed-dim/20 to-tertiary-fixed/20 rounded-3xl blur-2xl -z-10">
+              </div>
+              <div class="relative bg-surface-container-lowest rounded-2xl p-4 shadow-xl overflow-hidden">
+                <div class="relative w-full h-[380px] rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Modern dignified Islamic learning center class in Indonesia, warm natural morning sunlight gently streaming onto Indonesian Muslim students studying Al-Quran with an experienced teacher, serene emerald green and wood warm accents, editorial documentary photography, cinematic depth of field."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBle5YLBpEv2mNYiactFrQmB5l3nJbd-bZfOdZHYrp_4NxxmOGoWaIFhRhiyxIs9S49tQQDEgWSStUgEN-yc06CWMxYeWbo2y6VLTF2odtFZeo-YL4DfXjLw0pqZl4R-XyzsCgn-P9TdUYNWmO4EpasXlwKmEE2d6ECj1Y_wlXbtcrBXx3vIKIgfB_6L5ttOTKIBeqxnXqkqX9VclifEOiy7Wp6G7f8wTQYJyHEqdXtXEFTMIltS60W">
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 right-4 text-on-primary">
+                    <span
+                      class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-[11px] font-label-md tracking-wider uppercase mb-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span> Cikarang, Bekasi
+                    </span>
+                    <p class="font-headline-sm text-headline-sm font-semibold text-white">Menyemai Karakter Qur'ani</p>
+                    <p class="font-body-sm text-body-sm text-white/90">Program belajar intensif anak-anak &amp; kelas
+                      dewasa.</p>
+                  </div>
+                </div>
+                <!-- Overlapping Floating Pill Card -->
+                <div
+                  class="absolute -bottom-2 right-8 bg-surface-container-lowest py-3 px-5 rounded-xl shadow-lg flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                    <span class="material-symbols-outlined text-[22px]">menu_book</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-lg text-label-lg text-primary">Tahsin &amp; Tahfidz</span>
+                    <span class="font-caption text-caption text-on-surface-variant">Terbuka Untuk Segala Jenjang</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: TENTANG KAMI -->
+      <section class="py-24 bg-surface-container-low relative" id="tentang-kami">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Header -->
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="font-label-md text-label-md text-secondary uppercase tracking-widest font-semibold">Mengenal
+              Yayasan Salsabila</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Tentang Kami</h2>
+            <div class="w-12 h-1 bg-secondary rounded-full"></div>
+          </div>
+          <!-- Vision Banner & Background Narrative -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
+            <!-- Visi Quote Banner -->
+            <div
+              class="lg:col-span-5 bg-primary text-on-primary rounded-2xl p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden shadow-lg">
+              <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[200px]">format_quote</span>
+              </div>
+              <div>
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-on-primary font-label-md text-label-md mb-6">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary-fixed">lightbulb</span>
+                  <span>Visi Utama Kami</span>
+                </div>
+                <blockquote
+                  class="font-headline-md text-headline-md italic font-normal leading-relaxed text-surface-container-lowest">
+                  “kami ingin memberikan pendidikan islam kepada semua orang”
+                </blockquote>
+              </div>
+              <div class="pt-8 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-surface-container-high/20 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-tertiary-fixed text-[20px]">verified</span>
+                </div>
+                <div>
+                  <p class="font-label-lg text-label-lg text-white">Prinsip Kesetaraan Ilmu</p>
+                  <p class="font-caption text-caption text-white/70">Amanah Dakwah Yayasan Salsabila</p>
+                </div>
+              </div>
+            </div>
+            <!-- Latar Belakang Detailed Narrative Card -->
+            <div
+              class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-8 lg:p-10 shadow-sm flex flex-col justify-center space-y-6">
+              <div
+                class="inline-flex items-center gap-2 font-label-md text-label-md text-secondary tracking-wider uppercase font-semibold">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span>Latar Belakang Yayasan</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-primary font-semibold">
+                Membangun Jembatan Pemahaman Agama Tanpa Batas Usia
+              </h3>
+              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                <span class="font-semibold text-primary">kami merupakan yayasan yang bergerak di bidang pendidikan islam
+                  untuk anak anak maupun dewasa yang ingin belajar lebih lanjut</span>. Kami meyakini bahwa proses
+                belajar agama adalah perjalanan seumur hidup yang tidak mengenal batasan usia maupun latar belakang
+                sosial.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Didirikan atas dasar kepedulian mendalam terhadap ketersediaan wadah taklim yang ramah, terstruktur, dan
+                akomodatif, kami menghadirkan kurikulum yang berakar pada Al-Qur'an dan Sunnah dengan pendekatan
+                pengajaran kontemporer yang relevan bagi kehidupan sehari-hari masyarakat modern.
+              </p>
+            </div>
+          </div>
+          <!-- Structured Program Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Anak-Anak -->
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div
+                  class="w-14 h-14 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[30px]">child_care</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-caption text-caption uppercase text-secondary font-semibold tracking-wider">Generasi
+                    Tunas</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary">Program Anak-Anak</h4>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Pembinaan akhlak, tahsin &amp; tahfidz dasar, serta pembentukan karakter qur'ani sejak usia dini
+                  dengan metode interaktif yang menyenangkan.
+                </p>
+              </div>
+              <div class="pt-4 flex items-center gap-2 text-primary font-label-lg text-label-lg">
+                <span>Kelas Harian &amp; Akhir Pekan</span>
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              </div>
+            </div>
+            <!-- Card 2: Dewasa & Umum -->
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div
+                  class="w-14 h-14 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[30px]">groups</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-caption text-caption uppercase text-secondary font-semibold tracking-wider">Halaqah
+                    Tholabul Ilmi</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary">Program Dewasa &amp; Umum</h4>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Kelas kajian tafsir, fiqih praktis, dan tahsin tilawah untuk usia dewasa dan pekerja yang dirancang
+                  fleksibel dengan materi yang aplikatif.
+                </p>
+              </div>
+              <div class="pt-4 flex items-center gap-2 text-primary font-label-lg text-label-lg">
+                <span>Kajian Offline &amp; Hybrid</span>
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              </div>
+            </div>
+            <!-- Card 3: Nilai Utama -->
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div
+                  class="w-14 h-14 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[30px]">spa</span>
+                </div>
+                <div class="space-y-2">
+                  <span class="font-caption text-caption uppercase text-secondary font-semibold tracking-wider">Pilar
+                    Gerakan</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary">Nilai Utama</h4>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Inklusif, Berkelanjutan, dan Berlandaskan Al-Qur'an &amp; Sunnah. Menjamin kehangatan persaudaraan dan
+                  kemudahan akses bagi siapapun yang berikhtiar menuntut ilmu.
+                </p>
+              </div>
+              <div class="pt-4 flex items-center gap-2 text-primary font-label-lg text-label-lg">
+                <span>Amanah &amp; Terbimbing Asatidz</span>
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 3: DONASI & KONTAK -->
+      <section class="py-24 bg-background relative overflow-hidden" id="kontak">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Header -->
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="font-label-md text-label-md text-secondary uppercase tracking-widest font-semibold">Tebar
+              Manfaat &amp; Terhubung</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Donasi &amp; Kontak</h2>
+            <div class="w-12 h-1 bg-secondary rounded-full"></div>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Dukung keberlanjutan program dakwah pendidikan Islam kami atau hubungi pengurus yayasan untuk informasi
+              pendaftaran dan silaturahmi.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Rekening Donasi Card (Left Column) -->
+            <div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl p-8 shadow-md relative overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim"
+                    style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+                  Infaq &amp; Wakaf Pendidikan
+                </span>
+                <span class="font-label-md text-label-md text-secondary font-semibold">Resmi Yayasan</span>
+              </div>
+              <div class="space-y-2 mb-8">
+                <h3 class="font-headline-sm text-headline-sm text-primary">Rekening Operasional &amp; Dakwah</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Setiap rupiah donasi Anda menjadi amal jariyah yang menopang fasilitas belajar santri anak dan program
+                  kajian dewasa.
+                </p>
+              </div>
+              <!-- Bank Account Box -->
+              <div class="bg-surface-container-low rounded-xl p-6 space-y-5">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider block">Nama
+                      Bank</span>
+                    <span class="font-headline-sm text-headline-sm text-primary font-bold">Bank BRI</span>
+                  </div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold font-headline-sm">
+                    BRI
+                  </div>
+                </div>
+                <div>
+                  <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider block">Nomor
+                    Rekening</span>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="font-headline-md text-headline-md tracking-wider text-primary font-bold"
+                      id="acc-number">7172-1416-2029</span>
+                    <button
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md"
+                      id="btn-copy-acc" onclick="copyAccountNumber()" title="Salin No. Rekening" type="button">
+                      <span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+                      <span id="copy-text">Salin</span>
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider block">Atas
+                    Nama (A/N)</span>
+                  <span class="font-label-lg text-label-lg text-on-surface font-semibold">Yayasan Salsabilla</span>
+                </div>
+              </div>
+              <!-- Trust Badge / Note -->
+              <div class="mt-6 p-4 rounded-xl bg-surface-container-high/60 flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">verified_user</span>
+                <div>
+                  <p class="font-label-md text-label-md text-primary font-bold">Penyaluran Transparan &amp;
+                    Berkelanjutan</p>
+                  <p class="font-caption text-caption text-on-surface-variant mt-0.5">
+                    Laporan realisasi dana infaq &amp; shadaqah dipertanggungjawabkan secara berkala untuk menopang
+                    beasiswa santri dhuafa dan pemeliharaan sarana kelas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Kontak & Alamat Information (Right Column) -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="bg-surface-container-lowest rounded-2xl p-8 shadow-md space-y-8">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Saluran Komunikasi Langsung</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Silakan hubungi perwakilan kami untuk pertanyaan seputar kurikulum, jadwal halaqah, pendaftaran
+                    santri, maupun konfirmasi donasi.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- WhatsApp Channel -->
+                  <div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[20px]">chat</span>
+                      </div>
+                      <div>
+                        <span class="font-caption text-caption text-on-surface-variant uppercase">WhatsApp Resmi</span>
+                        <p class="font-label-lg text-label-lg text-primary font-bold">0813-9076-9987</p>
+                      </div>
+                    </div>
+                    <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all"
+                      href="https://wa.me/6281390769987" rel="noopener noreferrer" target="_blank">
+                      <span>Chat WhatsApp</span>
+                      <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                    </a>
+                  </div>
+                  <!-- Email Channel -->
+                  <div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between space-y-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[20px]">mail</span>
+                      </div>
+                      <div class="min-w-0">
+                        <span class="font-caption text-caption text-on-surface-variant uppercase">Surat
+                          Elektronik</span>
+                        <p class="font-label-lg text-label-lg text-primary font-semibold truncate"
+                          title="yayasanSalsabilla@gmail.com">
+                          yayasanSalsabilla@gmail.com
+                        </p>
+                      </div>
+                    </div>
+                    <a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md"
+                      href="mailto:yayasanSalsabilla@gmail.com">
+                      <span>Kirim Email</span>
+                      <span class="material-symbols-outlined text-[16px]">outgoing_mail</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Location & Map Visual Pin -->
+                <div class="space-y-4 pt-2">
+                  <div class="flex items-start gap-3">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-1">
+                      <span class="material-symbols-outlined text-[20px]">location_on</span>
+                    </div>
+                    <div>
+                      <span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Pusat
+                        Kegiatan Yayasan</span>
+                      <p class="font-headline-sm text-headline-sm text-primary font-semibold">Cikarang, Bekasi, Jawa
+                        Barat</p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                        Kawasan terpadu kegiatan taklim, ruang kelas santri, dan pusat koordinasi dakwah kemasyarakatan.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Interactive-Styled Map Container using data-location -->
+                  <div
+                    class="w-full h-52 bg-cover bg-center rounded-xl relative shadow-inner overflow-hidden flex items-end p-4"
+                    data-location="Cikarang, Bekasi, Indonesia"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiT2lgFXIjoZsZE9kp2vOi26brUM0t43KPI1i7NyEZShTYf_stvuQx4UcRRGKhUdSOESen-VCVMo2YVBcw36KEl8yrnLql15ko74BDM-gKif1lQaq2rHSXn9Ta7dVkDU8_-L0A8XmOJY-q_aHokl0-5ateMGiuXKd1TjBPy8Zj1MI_4_Mftf1t2vSoeNeGCwAIKJgU09SEQoAgQe68JE2Ck5-y-agFQCmCQCbQG59GDFVylCa9i-11')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+                    <div class="relative z-10 flex items-center justify-between w-full text-on-primary">
+                      <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary-fixed text-[20px]">pin_drop</span>
+                        <span class="font-label-lg text-label-lg">Cikarang, Bekasi</span>
+                      </div>
+                      <span class="font-caption text-caption px-2.5 py-1 rounded bg-white/20 backdrop-blur-md">Pusat
+                        Pembelajaran</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive JavaScript for Account Number Copying -->
+      <script>
+        function copyAccountNumber() {
+          const rawNumber = '717214162029';
+          navigator.clipboard.writeText(rawNumber).then(() => {
+            const copyText = document.getElementById('copy-text');
+            const copyIcon = document.getElementById('copy-icon');
+            const btn = document.getElementById('btn-copy-acc');
+
+            if (copyText && copyIcon) {
+              copyText.textContent = 'Tersalin!';
+              copyIcon.textContent = 'check';
+              btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+
+              setTimeout(() => {
+                copyText.textContent = 'Salin';
+                copyIcon.textContent = 'content_copy';
+                btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+              }, 2500);
+            }
+          }).catch(err => {
+            console.error('Failed to copy account number: ', err);
+          });
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low py-space-2xl">
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+      <div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">Yayasan
+          Salsabila</span><span class="text-outline">•</span><span>Amanah &amp; Pelayanan Ummat</span></div>
+      <div>© 2024 Yayasan Salsabila. Seluruh hak cipta dilindungi.</div>
+    </div>
+  </footer>
+</body>
+
+</html>
